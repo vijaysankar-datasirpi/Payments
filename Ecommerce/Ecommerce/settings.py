@@ -78,7 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ecommerce',
-        'PASSWORD':'Vj10',
+        'PASSWORD':'',
         'USER':'postgres',
         'HOST':'localhost',
         'PORT':'5432'
@@ -130,6 +130,6 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-PAYPAL_CLIENT_ID = "AYz9VZ-8nxbgnaZ7B-y8l2vi2K9y9xhjMwAM5CA8qXEAi2OHJol7z9U0MotPHXsoOvCkoS-ozopvrW95"
-PAYPAL_SECRET = "EHxeZ2wbCx949P4chFG6-6f7EwtnQtsN7ma9a_xWYZwi7z3zTiSue8DcIm6Y_1rTKbEMSwKcGKKRChNA"
+PAYPAL_CLIENT_ID = "#"
+PAYPAL_SECRET = "#"
 PAYPAL_API_BASE = "https://api-m.sandbox.paypal.com"
