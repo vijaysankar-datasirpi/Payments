@@ -20,8 +20,8 @@ def create_order(amount, currency="USD"):
         "intent": "CAPTURE",
         "purchase_units": [{"amount": {"currency_code": currency, "value": amount}}],
         "application_context": {
-            "return_url": "http://localhost:8000/payment-success/",
-            "cancel_url": "http://localhost:8000/payment-cancel/"
+            "return_url": "http://localhost:8000/payments/payment-success/",
+            "cancel_url": "http://localhost:8000/payments/payment-cancel/"
         }
     }
     response = requests.post(url, json=json_data, headers=headers)

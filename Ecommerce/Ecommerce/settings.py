@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-zc#p5#nna$u#s_)^90fizgz4&5xq)56bdxvtmw1&wjqy7g5$ao
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'payments'
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'Ecommerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ecommerce',
+        'PASSWORD':'Vj10',
+        'USER':'postgres',
+        'HOST':'localhost',
+        'PORT':'5432'
     }
 }
 
@@ -123,3 +128,8 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+PAYPAL_CLIENT_ID = "AYz9VZ-8nxbgnaZ7B-y8l2vi2K9y9xhjMwAM5CA8qXEAi2OHJol7z9U0MotPHXsoOvCkoS-ozopvrW95"
+PAYPAL_SECRET = "EHxeZ2wbCx949P4chFG6-6f7EwtnQtsN7ma9a_xWYZwi7z3zTiSue8DcIm6Y_1rTKbEMSwKcGKKRChNA"
+PAYPAL_API_BASE = "https://api-m.sandbox.paypal.com"

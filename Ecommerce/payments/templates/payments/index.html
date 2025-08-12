@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pay Now</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+        .pay-button {
+            padding: 12px 24px;
+            font-size: 18px;
+            color: white;
+            background-color: #0070ba;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .pay-button:hover {
+            background-color: #005c99;
+        }
+    </style>
+</head>
+<body>
+    <form action="/payments/start-payment/" method="GET">
+        <button type="submit" class="pay-button">Pay Now</button>
+    </form>
+</body>
+</html>
